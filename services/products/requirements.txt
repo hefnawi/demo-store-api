@@ -1,5 +1,6 @@
 Click==7.0
 Flask==1.0.2
+flask-restplus==0.12.1
 flask-buzz==0.1.7
 Flask-Cors==3.0.6
 flask-praetorian==0.4.8
