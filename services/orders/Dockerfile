@@ -10,7 +10,7 @@ ENV DEBUG=True \
     REFRESH_EXPIRES=30
 
 COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt && mkdir /data
 
 COPY api.py .
 COPY data.json /data
