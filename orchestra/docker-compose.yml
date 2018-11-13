@@ -32,6 +32,9 @@ services:
     networks:
       - redis-net
       - default
+    volumes:
+      - orders-json-data:/data
+
 
   products:
     image: hefnawi/products-microservice-api:v0.1
@@ -47,6 +50,9 @@ services:
     networks:
       - redis-net
       - default
+    volumes:
+      - products-json-data:/data
+
 
   redis:
     image: redis:5.0-alpine
@@ -58,6 +64,7 @@ services:
       - default
     volumes:
       - redis-data:/data
+
 
   nginx:
     image: hefnawi/nginx-api:v0.1
@@ -81,3 +88,5 @@ networks:
 
 volumes:
   redis-data:
+  products-json-data:
+  orders-json-data:

@@ -12,7 +12,7 @@ import redis
 
 redis_db = redis.StrictRedis(host='redis', port=6379, db=0, decode_responses=True)
 
-products_json_file = "data.json"
+products_json_file = "/data/data.json"
 
 app = Flask(__name__)
 

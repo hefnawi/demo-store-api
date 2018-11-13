@@ -13,7 +13,7 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY api.py .
-COPY data.json .
+COPY data.json /data
 
 EXPOSE 5000
 
